@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="NaN" Margin="0,0,0,-16">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEBD0B1"/>
+                <GradientStop Color="#FF71D9D9" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="63" Margin="492,51,0,0" Stroke="Black" VerticalAlignment="Top" Width="260" Fill="#FFBCF4E8"/>
+        <Button x:Name="StopCollecting" Content="Stop Collecting" HorizontalAlignment="Left" Margin="83,338,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Width="375" Height="36" BorderBrush="Black" Background="#FFFF6D5C" Click="StopCollecting_Click_1"/>
+        <Button x:Name="GetImperialValue" Content="Get Imperial Value" HorizontalAlignment="Left" Margin="83,155,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Height="37" Width="156" BorderBrush="Black" Background="#FFFACDCD" Click="GetImperialValue_Click"/>
+        <Button x:Name="GetRawData" Content="Get Raw Data" HorizontalAlignment="Left" Margin="570,359,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Width="156" Height="37" Background="#FFFACDCD" Click="GetRawData_Click"/>
+        <RadioButton x:Name="Imperial" Content="Imperial" HorizontalAlignment="Left" Margin="644,64,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Checked="Imperial_Checked"/>
+        <RadioButton x:Name="Metric" Content="Metric" HorizontalAlignment="Left" Margin="644,84,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Checked="Metric_Checked"/>
+        <RadioButton x:Name="Mass" Content="MASS" HorizontalAlignment="Left" Margin="510,64,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" GroupName="pp"/>
+        <RadioButton x:Name="Length" Content="LENGTH" HorizontalAlignment="Left" Margin="510,84,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" GroupName="pp"/>
+        <Button x:Name="StartCollecting1_Copy" Content="Start Collecting" HorizontalAlignment="Left" Margin="83,295,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Height="36" Width="375" Background="#FF87FF5C" Foreground="Black" BorderBrush="Black" Click="Button_Click"/>
+        <Button x:Name="CreateInstance" Content="Create Instance" HorizontalAlignment="Left" Margin="83,252,0,0" VerticalAlignment="Top" Click="CreateInstance_Click" Width="375" Height="36" FontFamily="Rubik" FontSize="17" Background="#FF42FFE4"/>
+        <ListBox x:Name="ListRawData" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="568,135,72,125" Height="NaN" Width="NaN"/>
+        <Label x:Name="LabelMerticValue" Content="" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top" Background="#FFEAFFFA" Width="156" Height="37" FontFamily="Rubik" FontSize="17" BorderBrush="Black" Foreground="#FF251212"/>
+        <Label x:Name="LabelImperialValue" Content="" HorizontalAlignment="Left" Margin="309,155,0,0" VerticalAlignment="Top" Background="#FFEAFFFA" Width="156" Height="37" FontFamily="Rubik" FontSize="17" BorderBrush="Black" Foreground="#FF251212"/>
+        <Button x:Name="GetMetricValue" Content="Get Metric Value" HorizontalAlignment="Left" Margin="83,69,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="17" Height="37" Width="156" BorderBrush="Black" Background="#FFFACDCD" Click="GetMetricValue_Click"/>
+        <StackPanel Margin="492,54,193,339"/>
+        <StackPanel Margin="637,54,48,339"/>
+
+    </Grid>
+</Window>
